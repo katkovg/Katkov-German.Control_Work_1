@@ -56,3 +56,17 @@ while(count < size)
     arrayWords[count] = word;
     count++;
 }
+
+Console.WriteLine("\nВведённый массив:");
+ShowArray(arrayWords);
+
+int newArraySize = 0;
+
+newArraySize = DetermineArraySize(arrayWords, newArraySize);
+
+string[] newArrayWords = new string [newArraySize];
+
+newArrayWords = FillArray(arrayWords, newArrayWords);
+
+Console.WriteLine("\n\nНовый массив (остались только те элементы, в которых три символа или меньше):");
+ShowArray(newArrayWords);
