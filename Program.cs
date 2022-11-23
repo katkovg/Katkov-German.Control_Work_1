@@ -41,3 +41,18 @@ while(size < 1)
 }
 
 string[] arrayWords = new string [size];
+
+int count = 0;
+string word;
+while(count < size)
+{
+    Console.Write($"Введите {count}-й элемент массива: ");
+    word = Convert.ToString(Console.ReadLine());
+    while(word == "")
+    {
+        Console.Write("Введите именно слово или символ: ");
+        word = Convert.ToString(Console.ReadLine());
+    }
+    arrayWords[count] = word;
+    count++;
+}
